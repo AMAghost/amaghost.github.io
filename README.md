@@ -5,6 +5,425 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="Main Page.css">
         <title>Document</title>
+        <style>
+            *,
+            ::before,
+            ::after {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;  
+            
+            }
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+            .main_page {
+                width: 100%;
+                height: 3050px;
+            }
+            @media (max-width:390px) {
+                .header{
+                    flex-direction: column;
+                    gap: 30px;
+                }
+                .logo_header {
+                    width: 100%;
+                    height: 60px;
+                    padding-right: 250px;
+                }
+                .nav {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center;
+                }
+                .search {
+                    
+                }
+                .login {
+                   
+                }
+            }
+            .header {
+                width: 100%;
+                padding: 30px;
+                background: #666eff;
+                display: inline-flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 10px;
+            }
+            .logo_header {
+                max-width: 100%;
+            }
+            .nav {
+                display: flex;
+                align-items: flex-end;
+                gap: 89px;
+            }
+            .nav_link {
+                color: #FFF;
+                font-family: sans-serif;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+                text-decoration: none;
+            }
+            .search_input {
+                display: flex;
+                width: 271px;
+                padding: 15px 20px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 10px;
+                border: #FFF;
+                border-radius: 15px;
+                background: #FFF;
+            }
+            .login {
+                color: #FFF;
+                text-align: center;
+                font-size: 18px;
+                font-weight: 600;
+                font-family: sans-serif;
+                text-decoration: none;
+            }
+            .wind {
+                background-color: #666eff;
+                max-width: 800px;
+                margin: auto;
+                color: white;
+                align-items: center;
+                padding: 60px;
+                border-radius: 20px;
+                zoom: 90%;
+            }
+            .wind>a {
+                display: block;
+                text-decoration: none;
+                color: #FFF;
+                border-bottom: 1px solid white;
+                text-align: center;
+                margin-bottom: 50px;
+                padding-bottom: 20px;
+                font-size: 32px;
+                font-family: sans-serif;
+            }
+            .modal_wind1:target {
+                display: flex;
+            }
+            .modal_wind1 {
+                display: flex;
+                position: fixed;
+                inset: 0;
+                display: none;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+            .menu {
+                display: none;
+            }
+            .preview {
+                width: 100%;
+                height: 800px;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                background: white;
+                flex-shrink: 0;
+            }
+            .preview_info {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 38px;
+            }
+            .premiere {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                gap: -40px;
+            }
+            .premiere_text {
+                width: 544px;
+                height: 121px;
+                color: #666eff;
+                font-family: sans-serif;
+                text-align: center;
+                font-size: 72px;
+                font-weight: 700;
+            }
+            .premiere_info {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 38px;
+                margin-left: 85px;
+            }
+            .preview_block {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 100px;
+                gap: 38px;
+            }
+            .premiere_name {
+                width: 408px;
+                height: 78px;
+                color: #000;
+                font-size: 40px;
+                font-family: sans-serif;
+                font-weight: 600;
+            }
+            .premiere_description {
+                width: 500px;
+                height: 88px;
+                color: #636262;
+                font-family: sans-serif;
+                font-size: 16px;
+                font-weight: 600;
+            }
+            .premiere_button {
+                width: 437px;
+                height: 90px;
+                margin-left: 85px;
+            }
+            .premiere_btn {
+                display: flex;
+                padding: 22px;
+                align-items: center;
+                justify-content: center;
+                gap: 43px;
+                width: 330px;
+                height: 46px;
+                color: #666eff;
+                text-decoration: none;
+                font-size: 32px;
+                font-family: sans-serif;
+                font-weight: 400;
+                border: 3px solid #666eff;
+                background: #FFF;
+                width: 437px;
+                height: 90px;
+            }
+            .premiere_btn:hover {
+                background: #666eff;
+                color: #FFF;
+                transition: 0.5s;
+            }
+            .films-top {
+                background: #666eff;
+                padding-top: 50px;
+                height: 942px;
+            }
+            .films_top-text {
+                display: flex;
+                width: 405px;
+                height: 48px;
+                align-items: center;
+                justify-content: center;
+                margin-left: 782px;
+                gap: 16px;
+            }
+            .top-text {
+                color: #000;
+                width: 356px;
+                height: 47px;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 40px;
+                font-weight: 700;
+            }
+            .films-tops {
+                display: flex;
+                align-items: flex-start;
+                align-content: center;
+                gap: 100px;
+                margin-left: 192px;
+                margin-top: 45px;
+            }
+            .films {
+                display: inline-flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-content: center;
+            }
+            .rating {
+                width: 450px;
+                height: 66px;
+                background: white;
+            }
+            .rating_text {
+                width: 336px;
+                height: 35px;
+                margin-top: 9px;
+                margin-left: 69px;
+                color: #666eff;
+                font-family: sans-serif;
+                font-size: 40px;
+                font-weight: 700;
+            }
+            .advantages {
+                display: inline-flex;
+                width: 100%;
+                height: 500px;
+                justify-content: center;
+                align-items: center;
+                background: white;
+            }
+            .advantages-blocks {
+                display: flex;
+                align-items: flex-start;
+                gap: 86px;
+            }
+            .advantages-block {
+                display: flex;
+                width: 450px;
+                height: 328px;
+                flex-direction: column;
+                align-items: center;
+                gap: 42px;
+                background: #FFF;
+                border: 3px solid #666eff;
+                border-radius: 10px;
+            }
+            .advantages-text {
+                margin-top: 29px;
+                width: 276px;
+                height: 187px;
+                color: #666eff;
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 32px;
+                font-weight: 600;
+            }
+            .advantages-icons {
+                margin-bottom: 29px;
+            }
+            .mailing {
+                display: inline-flex;
+                flex-direction: column;
+                width: 100%;
+                height: 400px;
+                align-items: flex-start;
+                background: #666eff;
+                gap: 10px;
+            }
+            .mailing_block {
+                margin-top: 94px;
+                margin-left: 125px;
+                width: 1670px;
+                height: 200px;
+                background: #FFF;
+            }
+            .mailing-mail {
+                display: flex;
+                align-items: center;
+                gap: 97px;
+            }
+            .mailing-text {
+                display: flex;
+                align-items: flex-start;
+                gap: 61px;
+                margin-top: 38px;
+                margin-left: 100px;
+            }
+            .mailing-txt {
+                width: 461px;
+                height: 99px;
+                color: #000;
+                font-family: sans-serif;
+                font-size: 32px;
+                font-weight: 400;
+            }
+            .mailing-mailing {
+                display: flex;
+                align-items: flex-start;
+                margin-top: 40px;
+            }
+            .mailing-input {
+                display: flex;
+                width: 481px;
+                height: 67px;
+                padding: 0px 14px;
+                align-items: center;
+                gap: 10px;
+                border: 5px solid #666eff;
+                background: #FFF;
+            }
+            .mailing-button {
+                display: flex;
+                width: 205px;
+                height: 67px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                background: #666eff;
+            }
+            .mailing-btn-text {
+                color: #FFF;
+                font-family: sans-serif;
+                font-size: 32px;
+                font-weight: 400;
+            }
+            .mailing-btn {
+                text-decoration: none;
+            }
+            .footer {
+                display: inline-flex;
+                width: 100%;
+                height: 321px;
+                padding: 29px 373px;
+                flex-direction: column;
+                align-items: center;
+                gap: 46px;
+                flex-shrink: 0;
+                background: #000;
+            }
+            .footer_icons {
+                display: flex;
+                width: 523px;
+                justify-content: center;
+                align-items: center;
+                gap: 80px;
+            }
+            .footer_nav {
+                display: flex;
+                align-items: flex-end;
+                gap: 114px;
+            }
+            .footer_nav-text {
+                width: 137px;
+                height: 21px;
+                color: #636262;
+                font-family: sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-decoration: none;
+            }
+            .line {
+                width: 1174px;
+                height: 3px;
+                background: #909090;
+            }
+            .footer_link {
+                width: 157px;
+                height: 31px;
+                flex-shrink: 0;
+                color: #909090;
+                font-family: sans-serif;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                text-decoration: none;
+            }
+        </style>
     </head>
     <body>
         <div class="main_page">
