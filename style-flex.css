@@ -1,0 +1,69 @@
+.header_inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 100px;
+}
+.header-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+}
+.cards-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cards-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 100px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-icon {
+    width: 60px;
+    height: 60px;
+}
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.footer-row {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+.button {
+    padding: 12px 5px;
+    border-radius: 10px;
+}
